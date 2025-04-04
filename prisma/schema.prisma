@@ -57,13 +57,13 @@ model Order {
   @@map("order")
 }
 
-// model Cart {
-//   id        Int      @id @default(autoincrement())
-//   userId    Int
-//   productId Int
-//   quantity  Int
-//   createdAt DateTime @default(now())
-//   updatedAt DateTime @updatedAt
+model Cart {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  productId Int
+  quantity  Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
-//   @@map("cart")
-// }
+  @@map("cart")
+}
