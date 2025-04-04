@@ -37,11 +37,32 @@ model User {
 model Product {
   id          Int      @id @default(autoincrement())
   name        String
+  quantity    Int
   description String
-  price       Float
-  image       String
+  price       String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
   @@map("product")
 }
+
+// model Order {
+//   id        Int      @id @default(autoincrement())
+//   userId    Int
+//   productId Int
+//   quantity  Int
+//   createdAt DateTime @default(now())
+//   updatedAt DateTime @updatedAt
+
+//   @@map("order")
+// }
+// model Cart {
+//   id        Int      @id @default(autoincrement())
+//   userId    Int
+//   productId Int
+//   quantity  Int
+//   createdAt DateTime @default(now())
+//   updatedAt DateTime @updatedAt
+
+//   @@map("cart")
+// }
