@@ -59,6 +59,17 @@ model Order {
   @@map("order")
 }
 
+model OrderItem {
+  id        Int      @id @default(autoincrement())
+  orderId   Int
+  productId Int
+  quantity  Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("orderItem")
+}
+
 model Cart {
   id        Int      @id @default(autoincrement())
   userId    Int
