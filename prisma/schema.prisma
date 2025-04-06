@@ -71,6 +71,7 @@ model Order {
   user       User        @relation(fields: [userId], references: [id])
   product    Product     @relation(fields: [productId], references: [id])
   orderItems OrderItem[]
+  payment    Payment[]
 
   @@map("order")
 }
@@ -115,6 +116,19 @@ model Review {
   product Product @relation(fields: [productId], references: [id])
 
   @@map("review")
+}
+
+model Payment {
+  id        Int      @id @default(autoincrement())
+  orderId   Int
+  amount    String
+  status    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  order Order @relation(fields: [orderId], references: [id])
+
+  @@map("payment")
 }
 
 // model Role {
