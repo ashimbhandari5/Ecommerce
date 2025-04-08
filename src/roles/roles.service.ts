@@ -6,7 +6,7 @@ import { PrismaService } from 'src/prisma/prisma.service';
 @Injectable()
 export class RolesService {
   constructor(private readonly prismaService: PrismaService) {}
-  create(createRoleDto: CreateRoleDto) {
+  async create(createRoleDto: CreateRoleDto) {
     return 'This action adds a new role';
   }
 
