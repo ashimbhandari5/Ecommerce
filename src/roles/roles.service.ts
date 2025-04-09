@@ -7,7 +7,9 @@ import { PrismaService } from 'src/prisma/prisma.service';
 export class RolesService {
   constructor(private readonly prismaService: PrismaService) {}
   async create(createRoleDto: CreateRoleDto) {
-    return this.prismaService;
+    return this.prismaService.role.create({
+      data: createRoleDto,
+    });
   }
 
   findAll() {
