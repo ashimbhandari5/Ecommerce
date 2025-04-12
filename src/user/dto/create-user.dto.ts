@@ -12,4 +12,12 @@ export class CreateUserDto {
   @IsNotEmpty()
   @IsString()
   mobile: string;
+
+  @IsNotEmpty()
+  @IsString()
+  password: string;
+
+  @IsNotEmpty()
+  @IsString()
+  email: string;
 }
