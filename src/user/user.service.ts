@@ -13,7 +13,7 @@ export class UserService {
   }
 
   async findAll() {
-    return `This action returns all user`;
+    return this.prismaService.user.findMany({});
   }
 
   async findOne(id: number) {
