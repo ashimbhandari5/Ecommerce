@@ -1,5 +1,7 @@
-export class CreateOrderDto {
+import { IsNotEmpty, IsString } from 'class-validator';
 
-    @IsNotEmpty()
-    @IsString()
+export class CreateOrderDto {
+  @IsNotEmpty()
+  @IsString()
+  total: String;
 }
