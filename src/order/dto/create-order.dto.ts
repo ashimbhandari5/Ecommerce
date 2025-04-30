@@ -12,4 +12,12 @@ export class CreateOrderDto {
   @IsNotEmpty()
   @IsInt()
   productId: number;
+
+  @IsNotEmpty()
+  @IsString()
+  orderDate: string;
+
+  @IsNotEmpty()
+  @IsString()
+  description: string;
 }
